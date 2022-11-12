@@ -1,0 +1,38 @@
+{
+  "$schema": "https://www.krakend.io/schema/v3.json",
+  "version": 3,
+  "name": "KrakenD Enterprise API Gateway",
+  "port": 8080,
+  "host": ["http://fake_api:8080"],
+  "timeout": "3000ms",
+  "cache_ttl": "300s",
+  "endpoints": [
+    {
+      "endpoint": "/clients",
+      "timeout": "8000ms",
+      "method": "GET",
+      "backend": [
+        {
+          "url_pattern": "/documents",
+          "is_collection": true,
+          "host": [
+            "http://documents:80"
+          ],
+          "mapping": {
+            "collection": "documents"
+          }
+        },
+        {
+          "url_pattern": "/printers",
+          "is_collection": true,
+          "host": [
+            "http://printers:80"
+          ],
+          "mapping": {
+            "collection": "printers"
+          }
+        }
+      ]
+    }
+  ]
+}

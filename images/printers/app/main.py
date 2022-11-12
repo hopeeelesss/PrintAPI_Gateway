@@ -1,0 +1,638 @@
+from fastapi import FastAPI
+import json
+
+app = FastAPI()
+
+
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
+
+
+@app.get("/hello/{name}")
+async def say_hello(name: str):
+    return {"message": f"Hello {name}"}
+
+
+@app.get("/printers")
+async def show_printers(amount: int = 10, page: int = 1):
+    # with open("sources/generated.json", 'r') as db:
+    #     text = json.load(db)
+    #     page -= 1
+    #     start = amount * page
+    #     end = amount * (page + 1)
+    #     if end > len(text) or start < 0 or end < start:
+    #         return "wrong params"
+    #     to_print = text[start:end]
+    text = anus
+    page -= 1
+    start = amount * page
+    end = amount * (page + 1)
+    if end > len(text) or start < 0 or end < start:
+        return "wrong params"
+    to_print = text[start:end]
+    return to_print
+
+
+anus = [
+    {
+        "printer_uuid": "636ecf6010b063813219b3ee",
+        "printer_name": "Carney",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60371b1b4c3655071e",
+        "printer_name": "Dean",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60e9c32f33b50b01d6",
+        "printer_name": "Becky",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60fed5c99649b06ae5",
+        "printer_name": "Kinney",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60527855fac0c501a3",
+        "printer_name": "Mckay",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf601a6617ae53c51408",
+        "printer_name": "Hines",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf603eb1cf9fb651ee61",
+        "printer_name": "Olive",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6013240cd3c64087a5",
+        "printer_name": "Francis",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60a7aae16264f149b5",
+        "printer_name": "Donaldson",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6028a32576110485e1",
+        "printer_name": "Cooke",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6051c156a499d4f7db",
+        "printer_name": "Agnes",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf604a5ad1500a823b81",
+        "printer_name": "Cooper",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60e39beb437ed3fe0d",
+        "printer_name": "Mcneil",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60ad92544ee98e99c9",
+        "printer_name": "Chen",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60fcd61f25d06b0a4f",
+        "printer_name": "Mercedes",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf602c1113eb859cd1c7",
+        "printer_name": "Lilian",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60e4be476e9db98008",
+        "printer_name": "Colon",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60b1022ba404231750",
+        "printer_name": "Patrice",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60b69a1c6d6650315b",
+        "printer_name": "Maricela",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6043a6808bf31e1cd1",
+        "printer_name": "Lynn",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60421690c7b6493c36",
+        "printer_name": "Katherine",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60619cdb1d5a8e02e1",
+        "printer_name": "Maura",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6047371b427e626e38",
+        "printer_name": "Whitfield",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf606a04fdf02aab70bb",
+        "printer_name": "Underwood",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf601afabddd4504c436",
+        "printer_name": "Florence",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60c7c7b18d9b3901a4",
+        "printer_name": "Peck",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6016b850a43bbe3a2c",
+        "printer_name": "Blair",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf608c5f75af06febe50",
+        "printer_name": "Gardner",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60b2d27a9b6b3b8c8d",
+        "printer_name": "Liz",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60ce341bf8311340cb",
+        "printer_name": "Patton",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60f2f74654eef22deb",
+        "printer_name": "Natalia",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60260a78a24cea8298",
+        "printer_name": "Murray",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf602f0e49696d87cd74",
+        "printer_name": "Helena",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6033a30f64cbb146e3",
+        "printer_name": "Linda",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6073b9a2d9a3d33a7b",
+        "printer_name": "Byers",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60f46f8c6416517b6d",
+        "printer_name": "Silvia",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60af648d4685398c06",
+        "printer_name": "Stewart",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60596e880bbd5d46a5",
+        "printer_name": "Minerva",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf605740f4ebc81db290",
+        "printer_name": "Nettie",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60af098bf078e6b3f2",
+        "printer_name": "Stella",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60b25dc4384d6b30c5",
+        "printer_name": "Miller",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60f859b54abf2dd9d6",
+        "printer_name": "Constance",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60584ef14e24c35f5f",
+        "printer_name": "Malinda",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60972383e890fc7834",
+        "printer_name": "William",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60d2579bd425dde5a0",
+        "printer_name": "Mccoy",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf602a8b3a2d504767e0",
+        "printer_name": "Cameron",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60d423d8841bb49d35",
+        "printer_name": "Battle",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60b64f2e823a4ce4db",
+        "printer_name": "Hawkins",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60c28d897c22151881",
+        "printer_name": "Leticia",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf604c391f402f6f81ea",
+        "printer_name": "Misty",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf601452ffeb72a96850",
+        "printer_name": "Bernard",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6041cb5acf748c0ad9",
+        "printer_name": "Castro",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60656d535d4a1f22d6",
+        "printer_name": "Melody",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6004eab06c87fa3acd",
+        "printer_name": "Muriel",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60dee110ba66d06c00",
+        "printer_name": "Guy",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf603596f11e38cd4ccc",
+        "printer_name": "Deleon",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf607985e60c7b3cdfbd",
+        "printer_name": "Knight",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60e841a43f248d3f7d",
+        "printer_name": "Kristie",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf602eb7751da51458b8",
+        "printer_name": "Jordan",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60eeba77e7edd9151d",
+        "printer_name": "Karla",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf602f375c491657df05",
+        "printer_name": "Deirdre",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6092f46fd0ba884f3a",
+        "printer_name": "Flores",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60b9a1ef9669932032",
+        "printer_name": "Callie",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf604a79ef788b353865",
+        "printer_name": "Ortiz",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60cce034285e544d01",
+        "printer_name": "Leah",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60273b58545c63ec07",
+        "printer_name": "Latonya",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60aa58719945490c65",
+        "printer_name": "Long",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60f3d673ad1f176003",
+        "printer_name": "Maggie",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf607dac0259d6699c3f",
+        "printer_name": "Cindy",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60b66cdd0cb3841c14",
+        "printer_name": "Lila",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf601ca46afb9787f05b",
+        "printer_name": "Dale",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6058e825a9915b7687",
+        "printer_name": "Peggy",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6089d09c60eb1edc2b",
+        "printer_name": "Jeanie",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60ad68573f1e60c691",
+        "printer_name": "Lolita",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf608d57ec5f020ea00d",
+        "printer_name": "Head",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf604fc012794c4bc6a4",
+        "printer_name": "Cortez",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60e5be80c43e1de5a8",
+        "printer_name": "Clara",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60dffa0a8068f54973",
+        "printer_name": "Gabrielle",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf600deb9923bfc64bfc",
+        "printer_name": "Melva",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf606b5b443be1ad0bdc",
+        "printer_name": "Torres",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6080875cec6e20f4c3",
+        "printer_name": "Adeline",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf602c8d7bd1bd04cb85",
+        "printer_name": "Hale",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf606449722fed1d7ebf",
+        "printer_name": "Josefa",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60bcc51044d89a677b",
+        "printer_name": "Edna",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60d023b0191973557f",
+        "printer_name": "Dianne",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60a30f0a8273e9ba6f",
+        "printer_name": "Arnold",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf607acfff131b535071",
+        "printer_name": "Roxie",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6002d0a50b56c12445",
+        "printer_name": "Sharon",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6098892cb06eb4663d",
+        "printer_name": "Alberta",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6017a795ec719b83a0",
+        "printer_name": "Lowe",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60f7fa16bf9b7aa691",
+        "printer_name": "Mara",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6042e9a18ba42ad2aa",
+        "printer_name": "Rocha",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf604d41cce830199001",
+        "printer_name": "Brittney",
+        "printer_type": "sfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf604020bc9050e4036b",
+        "printer_name": "Harrison",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60b57a589730a7b041",
+        "printer_name": "Vilma",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60229f8a675ca6aa9f",
+        "printer_name": "Lakeisha",
+        "printer_type": "sfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60981203a935529ed6",
+        "printer_name": "Tommie",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf6078876200038d1df1",
+        "printer_name": "Brown",
+        "printer_type": "mfp",
+        "printer_address": "255.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf60a9275b1fd8cd7507",
+        "printer_name": "Ferguson",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    },
+    {
+        "printer_uuid": "636ecf601a2d4745e5f43c9d",
+        "printer_name": "Juliana",
+        "printer_type": "mfp",
+        "printer_address": "127.255.255.0"
+    }
+]
