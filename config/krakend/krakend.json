@@ -1,6 +1,17 @@
 {
   "$schema": "https://www.krakend.io/schema/v3.json",
   "version": 3,
+  "extra_config":{
+            "telemetry/opencensus": {
+              "exporters": {
+                "jaeger": {
+                  "endpoint": "http://localhost:16686/api/traces",
+                  "service_name":"clients",
+                  "buffer_max_count": 1000
+                }
+              }
+            }
+          },
   "name": "KrakenD Enterprise API Gateway",
   "port": 8080,
   "host": ["http://fake_api:8080"],
@@ -8,6 +19,7 @@
   "cache_ttl": "300s",
   "endpoints": [
     {
+      "@comment": "Feature: A public endpoint that requires no authentication",
       "endpoint": "/clients",
       "timeout": "8000ms",
       "method": "GET",

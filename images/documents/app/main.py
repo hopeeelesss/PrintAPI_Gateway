@@ -1,3 +1,4 @@
+import fastapi
 from fastapi import FastAPI
 import json
 
@@ -6,10 +7,15 @@ app = FastAPI()
 
 @app.get("/documents")
 async def documents(page: int = 1, amount: int = 10):
-#    with open("documents.json", 'r') as db:
-#        text = json.load(db)
+    #    with open("documents.json", 'r') as db:
+    #        text = json.load(db)
     text = anus
     return text[(page - 1) * amount:page * amount]
+
+
+@app.get("/headersback")
+async def headersback(user_agent: str = fastapi.Header(default=None)):
+    return {"User-Agent": user_agent}
 
 
 #
